@@ -9,26 +9,29 @@ var options = {encoding: 'utf8'};
 
 program
   .version('0.0.1')
-  .option('-p, --peppers', 'Add peppers')
-  .option('-P, --pineapple', 'Add pineapple')
-  .option('-b, --bbq', 'Add bbq sauce')
-  .option('-c, --cheese [type]', 'Add the specified type of cheese [marble]', 'marble')
+  // .option('-p, --peppers', 'Add peppers')
+  // .option('-P, --pineapple', 'Add pineapple')
+  // .option('-b, --bbq', 'Add bbq sauce')
+  // .option('-c, --cheese [type]', 'Add the specified type of cheese [marble]', 'marble')
   .parse(process.argv);
 
 var file1 = program.args[0];
 var file2 = program.args[1];
 var start = Date.now();
-fs.readFile(file1, options, function(err, contents) {
-	console.log(err);
-	console.log('First file reads: ' + contents);
-	console.log('took %s milliseconds to read', Date.now()- start);
+
+fs.readFile(file1, options, function(err, contents1) {
+	
+	fs.readFile(file2, options, function(err, contents2) {
+		// console.log(err);
+		console.log('Second file reads: ' + contents2);
+		// console.log('took %s milliseconds to read', Date.now()- start);
+		// console.log(err);
+		console.log('First file reads: ' + contents1);
+		console.log('took %s milliseconds to read', Date.now()- start);
+	});
+
 });
 
-fs.readFile(file2, options, function(err, contents) {
-	console.log(err);
-	console.log('Second file reads: ' + contents);
-	console.log('took %s milliseconds to read', Date.now()- start);
-});
 
 // console.log('What file would youl like to read? :');
 // if (program.peppers) console.log('  - peppers');

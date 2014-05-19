@@ -9,10 +9,8 @@ var options = {encoding: 'utf8'};
 
 program
   .version('0.0.1')
-  // .option('-p, --peppers', 'Add peppers')
-  // .option('-P, --pineapple', 'Add pineapple')
-  // .option('-b, --bbq', 'Add bbq sauce')
-  // .option('-c, --cheese [type]', 'Add the specified type of cheese [marble]', 'marble')
+  .option('-n, --number', 'Report just the number of words')
+  .option('-v, --verbose',  'Be more verbose, report timing information')
   .parse(process.argv);
 
 var file1 = program.args[0];

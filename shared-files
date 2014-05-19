@@ -23,6 +23,12 @@ fs.readFile(file1, options, function(err, contents1) {
 		var arr1 = contents1.split(' ');
 		var arr2 = contents2.split(' ');
 		
+		arr1.forEach (function (word1) {
+			arr2.forEach (function (word2) {
+				if (word1 === word2)
+					console.log('words in common: ' + word1);
+			});
+		});
 		// console.log(err);
 		console.log('Second file reads: ' + contents2);
 		// console.log('took %s milliseconds to read', Date.now()- start);
@@ -30,6 +36,7 @@ fs.readFile(file1, options, function(err, contents1) {
 		console.log('First file reads: ' + contents1);
 		console.log('took %s milliseconds to read', Date.now()- start);
 		console.log('arr1: %j arr2: %j', arr1, arr2);
+		// console.log('Common words: %j', arr3);
 	});
 
 });

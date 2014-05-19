@@ -1,0 +1,22 @@
+{
+  "name": "reading-files",
+  "version": "0.1.0",
+  "description": "An app that takes two differnt text files as arguments and output words from both filess",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sbaverett/reading-files.git"
+  },
+  "author": "Sam Averett and Carlo De Gregorio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sbaverett/reading-files/issues"
+  },
+  "homepage": "https://github.com/sbaverett/reading-files",
+  "dependencies": {
+    "commander": "^2.2.0"
+  }
+}

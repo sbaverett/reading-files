@@ -20,15 +20,19 @@ var start = Date.now();
 fs.readFile(file1, options, function(err, contents1) {
 	
 	fs.readFile(file2, options, function(err, contents2) {
+		var arr1 = contents1.split(' ');
+		var arr2 = contents2.split(' ');
 		// console.log(err);
 		console.log('Second file reads: ' + contents2);
 		// console.log('took %s milliseconds to read', Date.now()- start);
 		// console.log(err);
 		console.log('First file reads: ' + contents1);
 		console.log('took %s milliseconds to read', Date.now()- start);
+		console.log('arr1: %j arr2: %j', arr1, arr2);
 	});
 
 });
+
 
 
 // console.log('What file would youl like to read? :');
